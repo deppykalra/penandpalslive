@@ -204,29 +204,98 @@ footer {
 
 /* Event Two-Column Layout */
 
+/* ===== EVENT SECTION ===== */
+
+.event-section {
+  padding: 120px 10%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  max-width: 900px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Layout */
+
 .event-layout {
-  display: flex;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
   gap: 60px;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 50px;
-  flex-wrap: wrap;
+  align-items: start;
 }
 
-.event-info {
-  flex: 1;
-  min-width: 280px;
-  max-width: 500px;
-  text-align: left;
+/* LEFT COLUMN */
+
+.event-details-column {
+  max-width: 650px;
 }
 
-.event-widget {
-  flex: 1;
-  min-width: 320px;
-  max-width: 600px;
+.event-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
 }
 
-/* Make widget fit nicely */
-.ot-iframe {
-  width: 100%;
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.95rem;
+}
+
+body.light .detail-row {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.detail-row span:first-child {
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.note-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.policy-list {
+  padding-left: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* RIGHT COLUMN */
+
+.ticket-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+body.dark .ticket-card {
+  background: #f4f4f4;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .event-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-card {
+    margin-top: 40px;
+  }
 }
