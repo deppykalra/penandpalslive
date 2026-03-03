@@ -1,6 +1,6 @@
 :root {
   --blue: #0d3b8e;
-  --dark-bg: #0b0b0f;
+  --dark-bg: #0a0a0f;
   --light-bg: #f5f5f7;
   --dark-text: #ffffff;
   --light-text: #111111;
@@ -14,8 +14,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
@@ -34,38 +34,38 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   z-index: 1000;
-  transition: background 0.3s ease;
-}
-
-body.dark header {
-  background: rgba(10, 10, 15, 0.9);
 }
 
 body.light header {
-  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .logo-container img {
-  height: 70px;
-  transition: opacity 0.3s ease;
+  height: 65px;
 }
 
 nav a {
-  margin-right: 20px;
+  margin-right: 25px;
   text-decoration: none;
   color: inherit;
-  font-weight: 400;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
 }
 
 nav button {
-  background: none;
   border: 1px solid var(--blue);
+  background: none;
   color: var(--blue);
   padding: 6px 14px;
   border-radius: 20px;
@@ -76,182 +76,86 @@ nav button {
 
 .hero {
   height: 100vh;
-  background: url("assets/gaurav.jpeg") center/cover no-repeat;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.85)),
+    url("assets/gaurav.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  margin-top: 90px;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  transition: background 0.3s ease;
-}
-
-/* Theme-aware overlay */
-body.dark .overlay {
-  background: rgba(0, 0, 0, 0.75);
-}
-
-body.light .overlay {
-  background: rgba(255, 255, 255, 0.55);
+  padding: 0 20px;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-  transition: color 0.3s ease;
-}
-
-body.dark .hero-content {
-  color: #ffffff;
-}
-
-body.light .hero-content {
-  color: #111111;
+  max-width: 900px;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  letter-spacing: -1px;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  opacity: 0.85;
+  margin-bottom: 35px;
 }
 
-/* BUTTONS */
-
-.btn-primary,
-.btn-secondary {
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-}
+/* BUTTON */
 
 .btn-primary {
   background: var(--blue);
   color: white;
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.btn-secondary {
-  border: 1px solid var(--blue);
-  color: var(--blue);
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(13,59,142,0.4);
 }
 
-/* SECTIONS */
+/* EVENT SECTION */
 
-.section {
-   padding: 80px 10%;
-  text-align: center;
+.event-section {
+  padding: 120px 8%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.section h2 {
+.section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 30px;
 }
 
-.section.alt {
-  background: rgba(255, 255, 255, 0.03);
+.intro-text {
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.8;
+  opacity: 0.9;
 }
 
-body.light .section.alt {
-  background: rgba(0, 0, 0, 0.03);
-}
-
-.event-card {
-  max-width: 500px;
-  margin: auto;
-  padding: 40px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-body.light .event-card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* FOOTER */
-
-footer {
-  padding: 40px;
-  text-align: center;
-  opacity: 0.6;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Event Two-Column Layout */
-
-/* ===== EVENT SECTION ===== */
-
-/* ===== EVENT SECTION REFINED ===== */
-
-.event-section {
-  padding: 80px 0 120px 0;
-}
-
-.event-section .section-title {
-  max-width: 1100px;
-  margin: 0 auto 40px auto;
-  padding: 0 8%;
-}
-
-.event-section .intro-text {
-  max-width: 900px;
-  margin: 0 auto 20px auto;
-  padding: 0 8%;
-}
-
-/* Constrained layout wrapper */
 .event-layout {
-  max-width: 1200px;
-  margin: 80px auto 0 auto;
-  padding: 0 8%;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 80px;
-  align-items: start;
-}
-
-/* LEFT SIDE */
-
-.event-details-column {
-  width: 100%;
 }
 
 .event-title {
-  font-size: 1.9rem;
-  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
 }
 
 .detail-row {
   display: flex;
   justify-content: space-between;
-  padding: 22px 0;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-size: 0.95rem;
 }
 
 body.light .detail-row {
@@ -260,49 +164,47 @@ body.light .detail-row {
 
 .detail-row span:first-child {
   opacity: 0.6;
-  font-weight: 500;
 }
 
 .note-title {
-  margin-top: 60px;
-  margin-bottom: 25px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .policy-list {
-  margin-top: 10px;
   padding-left: 20px;
   line-height: 1.9;
-  max-width: 600px;
-  text-align: left;
 }
 
-.policy-list li {
-  margin-bottom: 10px;
-}
-
-/* RIGHT SIDE */
+/* TICKET CARD */
 
 .ticket-card {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 30px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.15);
   position: sticky;
   top: 120px;
 }
 
 body.dark .ticket-card {
-  background: #f5f5f5;
+  background: #f4f4f4;
 }
 
-/* MOBILE */
+/* FOOTER */
+
+footer {
+  padding: 60px 0;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 1000px) {
   .event-layout {
     grid-template-columns: 1fr;
-    gap: 60px;
   }
 
   .ticket-card {
