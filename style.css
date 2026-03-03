@@ -369,3 +369,15 @@ body.light .site-footer {
 .event-feature-card a:hover::after {
   transform: scaleX(0.6);
 }
+
+@media (max-width: 900px) {
+  .event-feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-card-image {
+    width: 100%;
+    max-width: 320px;
+  }
+}
