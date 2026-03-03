@@ -80,10 +80,10 @@ header {
 }
 
 .main-nav {
-  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 26px;
+   
 }
 
 .main-nav a {
@@ -91,6 +91,23 @@ header {
   font-weight: 500;
   font-size: 0.95rem;
   opacity: 0.85;
+   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+  .header-inner {
+    padding: 14px 5%;
+  }
+
+  .main-nav {
+    gap: 16px;
+  }
+
+  .logo-container img {
+    height: 48px;
+  }
+
 }
 
 body.dark .main-nav a {
