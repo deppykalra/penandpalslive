@@ -66,15 +66,14 @@ header {
   justify-content: space-between; /* key fix */
 }
 
-.logo-container img {
-  height: 56px;
-  display: block;
-  transition: transform 0.3s ease;
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* prevents compression */
 }
+
 .logo-container img {
   height: 56px;
-  display: block;
-  transition: transform 0.3s ease;
 }
 
 .main-nav {
