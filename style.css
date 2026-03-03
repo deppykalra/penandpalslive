@@ -108,18 +108,33 @@ body.light #theme-toggle {
 
 .brand-hero {
   min-height: 100vh;
-  padding-top: 160px;
-  padding-bottom: 120px;
+  padding: 180px 20px 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
+.brand-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .brand-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
-  margin-bottom: 20px;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+.brand-hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.brand-hero .btn-primary {
+  display: inline-block;
 }
 
 .brand-section {
