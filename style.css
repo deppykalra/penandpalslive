@@ -77,10 +77,7 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  display: flex;
-  align-items: center;
   opacity: 0.85;
-  transition: opacity 0.2s ease;
 }
 
 body.dark .main-nav a {
@@ -99,32 +96,92 @@ body.light .main-nav a:hover {
   color: #000000;
 }
 
-#theme-toggle {
-  margin-left: 8px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.5);
-}
+/* =========================
+   HERO (HOME)
+========================= */
 
-body.light #theme-toggle {
-  background: rgba(0,0,0,0.05);
-  color: #111;
-  border: 1px solid rgba(0,0,0,0.3);
-}
-
-.social-link {
+.brand-hero {
+  min-height: 70vh;
+  padding: 140px 8% 80px;
   display: flex;
   align-items: center;
-  opacity: 0.85;
-  transition: 0.2s ease;
+  justify-content: center;
+  text-align: center;
 }
 
-.social-link:hover {
-  opacity: 1;
+.brand-hero-content {
+  max-width: 850px;
+}
+
+.brand-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 25px;
+}
+
+.brand-hero p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+  padding: 14px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+}
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+.brand-section {
+  padding: 80px 8%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.brand-section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FEATURE CARD (HOME)
+========================= */
+
+.event-feature-card {
+  background: linear-gradient(135deg, #111, #1a1a1f);
+  padding: 60px;
+  border-radius: 28px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+body.light .event-feature-card {
+  background: linear-gradient(135deg, #ffffff, #f2f2f2);
+}
+
+.event-card-content {
+  flex: 1;
+}
+
+.event-card-image {
+  flex: 0 0 260px;
+}
+
+.event-card-image img {
+  width: 100%;
+  border-radius: 18px;
 }
 
 /* =========================
@@ -149,23 +206,8 @@ body.light #theme-toggle {
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin-bottom: 30px;
-}
-
-.btn-primary {
-  background: var(--blue);
-  color: white;
-  padding: 14px 34px;
-  border-radius: 40px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
 /* =========================
-   EVENT CONTENT LAYOUT
+   EVENT PAGE LAYOUT
 ========================= */
 
 .event-section {
@@ -187,30 +229,6 @@ body.light #theme-toggle {
   flex: 0 0 420px;
 }
 
-.event-left h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-}
-
-.event-left h3 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-.event-left p,
-.event-left li {
-  line-height: 1.7;
-  opacity: 0.9;
-}
-
-.event-left ul {
-  padding-left: 18px;
-}
-
-/* =========================
-   TICKET WIDGET BOX
-========================= */
-
 .ticket-box {
   background: #111;
   padding: 30px;
@@ -230,7 +248,12 @@ body.light .ticket-box {
     flex-direction: column;
   }
 
-  .event-right {
-    width: 100%;
+  .event-feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-card-image {
+    max-width: 320px;
   }
 }
