@@ -35,6 +35,14 @@ body.light {
 }
 
 /* =========================
+   FIX FOR FIXED HEADER
+========================= */
+
+main {
+  padding-top: 110px;
+}
+
+/* =========================
    HEADER
 ========================= */
 
@@ -54,22 +62,12 @@ header {
   align-items: center;
 }
 
-/* Logo */
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
 .logo-container img {
   height: 46px;
-  display: block;
 }
 
-/* Navigation (right aligned) */
-
 .main-nav {
-  margin-left: auto;   /* pushes nav fully right */
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -79,14 +77,11 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  letter-spacing: 0.3px;
   display: flex;
   align-items: center;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
-
-/* Dark mode links */
 
 body.dark .main-nav a {
   color: rgba(255,255,255,0.85);
@@ -96,8 +91,6 @@ body.dark .main-nav a:hover {
   color: #ffffff;
 }
 
-/* Light mode links */
-
 body.light .main-nav a {
   color: rgba(0,0,0,0.8);
 }
@@ -106,16 +99,8 @@ body.light .main-nav a:hover {
   color: #000000;
 }
 
-/* Instagram icon */
-
-.insta-link svg {
-  display: block;
-}
-
-/* Theme Toggle */
-
 #theme-toggle {
-  margin-left: 10px;
+  margin-left: 8px;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 14px;
@@ -123,12 +108,6 @@ body.light .main-nav a:hover {
   background: rgba(255,255,255,0.08);
   color: white;
   border: 1px solid rgba(255,255,255,0.5);
-  transition: all 0.2s ease;
-}
-
-#theme-toggle:hover {
-  background: rgba(255,255,255,0.15);
-  transform: translateY(-1px);
 }
 
 body.light #theme-toggle {
@@ -137,45 +116,44 @@ body.light #theme-toggle {
   border: 1px solid rgba(0,0,0,0.3);
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
 /* =========================
-   HERO (HOMEPAGE)
+   EVENT PAGE HERO
 ========================= */
 
-.brand-hero {
-  min-height: 70vh;
-  padding: 140px 20px 60px 20px;
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url("../assets/gaurav.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at 30% 30%, #111 0%, #0a0a0f 60%);
+  padding: 0 20px;
 }
 
-body.light .brand-hero {
-  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f3f3f3 70%);
-}
-
-.brand-hero-content {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.brand-hero h1 {
+.hero-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 3.8rem);
-  letter-spacing: -0.5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.brand-hero p {
-  font-size: 1.1rem;
-  opacity: 0.8;
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
   margin-bottom: 30px;
 }
-
-/* =========================
-   BUTTONS
-========================= */
 
 .btn-primary {
   background: var(--blue);
@@ -184,200 +162,75 @@ body.light .brand-hero {
   border-radius: 40px;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(13,59,142,0.4);
 }
 
 /* =========================
-   SECTIONS
+   EVENT CONTENT LAYOUT
 ========================= */
 
-.brand-section {
-  padding: 60px 8%;
-  max-width: 1100px;
-  margin: auto;
+.event-section {
+  padding: 80px 8%;
 }
 
-.brand-section h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 25px;
-}
-
-/* =========================
-   FEATURE CARD
-========================= */
-
-/* View Event link styling */
-/* FEATURE CARD */
-
-.event-feature-card {
-  background: linear-gradient(135deg, #111, #1a1a1f);
-  padding: 60px;
-  border-radius: 28px;
-  margin-top: 40px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.event-feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
-}
-
-body.light .event-feature-card {
-  background: linear-gradient(135deg, #ffffff, #f2f2f2);
-}
-
-
-/* FEATURE CARD LAYOUT */
-
-.event-feature-card {
+.event-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
-/* Left content */
-.event-card-content {
+.event-left {
   flex: 1;
 }
 
-/* Right image */
-.event-card-image {
-  flex: 0 0 260px;
+.event-right {
+  flex: 0 0 420px;
 }
 
-.event-card-image img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-  transition: transform 0.4s ease;
+.event-left h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
 }
 
-.event-feature-card:hover .event-card-image img {
-  transform: scale(1.03);
-}
-/* =========================
-   EVENT PAGE HERO
-========================= */
-
-.hero {
-  height: 100vh;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.85)),
-    url("assets/gaurav.jpeg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+.event-left h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 
-body.light .hero {
-  background:
-    linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.9)),
-    url("assets/gaurav.jpeg") center/cover no-repeat;
+.event-left p,
+.event-left li {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.event-left ul {
+  padding-left: 18px;
 }
 
 /* =========================
-   FOOTER
+   TICKET WIDGET BOX
 ========================= */
 
-.site-footer {
-  padding: 60px 8%;
-  border-top: 1px solid rgba(255,255,255,0.08);
+.ticket-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 24px;
 }
 
-body.light .site-footer {
-  border-top: 1px solid rgba(0,0,0,0.08);
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  opacity: 0.7;
-  color: inherit;
-}
-
-.footer-links a:hover {
-  opacity: 1;
+body.light .ticket-box {
+  background: #ffffff;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px) {
-  .main-nav {
-    gap: 16px;
-  }
-}
-
-@media (max-width: 700px) {
-  .main-nav {
-    gap: 14px;
-  }
-
-  .brand-hero {
-    min-height: 60vh;
-  }
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  opacity: 0.85;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-
-.event-feature-card a {
-  color: var(--blue);
-  font-weight: 500;
-  text-decoration: none;
-  position: relative;
-}
-
-.event-feature-card a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background: var(--blue);
-  transition: transform 0.3s ease;
-}
-
-.event-feature-card a:hover::after {
-  transform: scaleX(0.6);
-}
-
-@media (max-width: 900px) {
-  .event-feature-card {
+@media (max-width: 1000px) {
+  .event-container {
     flex-direction: column;
-    text-align: center;
   }
 
-  .event-card-image {
+  .event-right {
     width: 100%;
-    max-width: 320px;
   }
 }
