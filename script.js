@@ -1,5 +1,5 @@
 // Load header
-fetch("/penandpalslive/components/header.html")
+fetch("components/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-placeholder").innerHTML = data;
@@ -14,7 +14,7 @@ fetch("/penandpalslive/components/header.html")
   });
 
 // Load footer
-fetch("/penandpalslive/components/footer.html")
+fetch("components/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer-placeholder").innerHTML = data;
