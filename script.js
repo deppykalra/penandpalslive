@@ -1,32 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Load header
+fetch("/penandpalslive/components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
 
-  // ===== Load Header Component =====
-  fetch("/penandpalslive/components/header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-      initThemeToggle(); // initialize after header loads
-    });
-
-  function initThemeToggle() {
     const toggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const logo = document.getElementById("site-logo");
-
-    if (!toggle) return;
 
     toggle.addEventListener("click", () => {
-      body.classList.toggle("light");
-      body.classList.toggle("dark");
-
-      if (body.classList.contains("light")) {
-        toggle.textContent = "☾";
-        logo.src = "/penandpalslive/assets/logo-light.png";
-      } else {
-        toggle.textContent = "☀︎";
-        logo.src = "/penandpalslive/assets/logo-dark.png";
-      }
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+      localStorage.setItem("theme", document.body.className);
     });
-  }
+  });
 
-});
+// Load footer
+fetch("/penandpalslive/components/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.body.className = savedTheme;
+} else {
+  document.body.className = "dark";
+}
