@@ -201,3 +201,32 @@ footer {
     gap: 10px;
   }
 }
+
+/* Event Two-Column Layout */
+
+.event-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.event-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.event-widget {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+/* Make widget fit nicely */
+.ot-iframe {
+  width: 100%;
+}
