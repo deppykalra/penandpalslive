@@ -305,3 +305,35 @@ body.light .brand-section.alt {
   background: var(--blue);
   color: white;
 }
+/* ===== LIGHT MODE FIXES ===== */
+
+body.light .brand-hero {
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f3f3f3 70%);
+}
+
+body.light .hero {
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.9)),
+    url("assets/gaurav.jpeg") center/cover no-repeat;
+}
+
+body.light .event-feature-card {
+  background: linear-gradient(135deg, #ffffff, #f2f2f2);
+  color: #111;
+}
+
+body.light .detail-row {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+body.light nav a {
+  color: #111;
+}
+
+body.light header {
+  background: rgba(255,255,255,0.8);
+}
+
+body.dark header {
+  background: rgba(10,10,15,0.7);
+}
