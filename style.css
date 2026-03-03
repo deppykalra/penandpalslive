@@ -217,9 +217,9 @@ footer {
 /* ===== BRAND HERO ===== */
 
 .brand-hero {
-    min-height: 85vh;
-  padding-top: 120px;
-  padding-bottom: 100px;
+  min-height: 70vh;
+  padding-top: 140px;   /* space for fixed header */
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
