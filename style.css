@@ -238,7 +238,35 @@ body.light .event-feature-card {
 body.light .ticket-box {
   background: #ffffff;
 }
+/* =========================
+   EVENT DETAILS GRID
+========================= */
 
+.event-details {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  row-gap: 14px;
+  column-gap: 20px;
+}
+
+.event-details div {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+body.light .event-details div {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.event-label {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.event-value {
+  opacity: 0.95;
+}
 /* =========================
    RESPONSIVE
 ========================= */
