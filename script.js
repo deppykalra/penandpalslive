@@ -1,30 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const toggle = document.getElementById("theme-toggle");
-  const body = document.body;
-  const logo = document.getElementById("site-logo");
+  // ===== Load Header Component =====
+  fetch("/penandpalslive/components/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+      initThemeToggle(); // initialize after header loads
+    });
 
-  if (!toggle) return;
+  function initThemeToggle() {
+    const toggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const logo = document.getElementById("site-logo");
 
-  toggle.addEventListener("click", () => {
+    if (!toggle) return;
 
-    body.classList.toggle("light");
-    body.classList.toggle("dark");
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("light");
+      body.classList.toggle("dark");
 
-    const isSubPage = window.location.pathname.includes("gaurav-kapoor-live-warsaw");
-
-    if (body.classList.contains("light")) {
-      toggle.textContent = "☾";
-      if (logo) {
-        logo.src = isSubPage ? "../assets/logo-light.png" : "assets/logo-light.png";
+      if (body.classList.contains("light")) {
+        toggle.textContent = "☾";
+        logo.src = "/penandpalslive/assets/logo-light.png";
+      } else {
+        toggle.textContent = "☀︎";
+        logo.src = "/penandpalslive/assets/logo-dark.png";
       }
-    } else {
-      toggle.textContent = "☀︎";
-      if (logo) {
-        logo.src = isSubPage ? "../assets/logo-dark.png" : "assets/logo-dark.png";
-      }
-    }
-
-  });
+    });
+  }
 
 });
