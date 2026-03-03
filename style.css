@@ -32,33 +32,24 @@ body.light {
 
 /* ===== HEADER ===== */
 
+/* ===== HEADER ===== */
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
+  backdrop-filter: blur(14px);
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
   padding: 16px 8%;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(14px);
-  z-index: 1000;
-    flex-wrap: nowrap;
-
 }
 
-/* constrain content width */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10,10,15,0.75);
-  z-index: -1;
-}
-
-body.light header::before {
-  background: rgba(255,255,255,0.8);
-}
-
-/* LEFT SIDE (logo) */
 .logo-container {
   flex-shrink: 0;
 }
@@ -67,15 +58,13 @@ body.light header::before {
   height: 55px;
 }
 
-/* RIGHT SIDE (nav container) */
 header nav {
-  margin-left: auto;          /* pushes nav to right */
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-/* Nav links */
 nav a {
   text-decoration: none;
   font-weight: 500;
@@ -88,9 +77,8 @@ nav a:hover {
   opacity: 1;
 }
 
-/* Toggle always far right */
 nav button {
-  margin-left: 10px;
+  margin-left: 15px;
   border: 1px solid var(--blue);
   background: none;
   padding: 6px 14px;
@@ -98,17 +86,6 @@ nav button {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-  header nav {
-    gap: 18px;
-  }
-}
-
-@media (max-width: 700px) {
-  header nav a:not(:first-child) {
-    display: none;
-  }
-}
 
 /* HERO */
 
