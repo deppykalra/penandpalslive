@@ -301,3 +301,15 @@ body.light .site-footer {
     min-height: 60vh;
   }
 }
+
+.social-link {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
