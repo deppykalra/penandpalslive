@@ -334,3 +334,63 @@ body.light .ticket-box {
 .terms-list li {
   margin-bottom: 10px;
 }
+
+
+/* =========================
+   MOBILE TYPOGRAPHY FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+    padding: 140px 20px 100px;
+  }
+   /* Hero title */
+  .hero h1,
+  .brand-hero h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  /* Hero subtitle */
+  .hero p,
+  .brand-hero p {
+    font-size: 1.05rem;
+  }
+
+  /* Section headings */
+  .event-section h2,
+  .event-section h3,
+  .brand-section h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Body paragraph text */
+  .event-section p,
+  .brand-section p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  /* Event details grid text */
+  .event-value {
+    font-size: 1.05rem;
+  }
+
+  .event-label {
+    font-size: 0.95rem;
+  }
+
+  /* Terms list */
+  .terms-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+}
