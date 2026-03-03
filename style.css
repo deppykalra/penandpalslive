@@ -107,8 +107,9 @@ body.light #theme-toggle {
 ========================= */
 
 .brand-hero {
-  min-height: 70vh;
-  padding: 140px 8% 80px;
+  min-height: 100vh;
+  padding-top: 160px;
+  padding-bottom: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
