@@ -205,6 +205,17 @@ body.light .event-feature-card {
   border-radius: 22px;
    display: block;
 }
+@media (max-width: 1000px) {
+
+  .event-card-image {
+    flex: none;
+    width: 100%;
+    max-width: 520px;
+    margin: 20px auto 0;
+  }
+
+}
+
 
 /* =========================
    GLOBAL BUTTON
