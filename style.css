@@ -445,14 +445,27 @@ body.light .ticket-box {
 
 }
 
+/* =========================
+   MOBILE WIDGET WIDTH FIX
+========================= */
+
 @media (max-width: 768px) {
 
   .event-section {
-    padding: 40px 2%;
+    padding: 40px 4%;
+  }
+
+  .event-container {
+    gap: 40px;
+  }
+
+  .event-right {
+    flex: 1;
   }
 
   .ticket-box {
     padding: 16px;
+    border-radius: 18px;
        box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 
   }
