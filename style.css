@@ -126,6 +126,9 @@ body.light #theme-toggle {
   line-height: 1.05;
   letter-spacing: -0.5px;
   margin-bottom: 24px;
+ 
+  text-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
 }
 .brand-hero p {
   font-size: 1.1rem;
