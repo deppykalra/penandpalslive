@@ -197,12 +197,13 @@ body.light .event-feature-card {
 }
 
 .event-card-image {
-  flex: 0 0 260px;
+  flex: 0 0 340px;
 }
 
 .event-card-image img {
   width: 100%;
-  border-radius: 18px;
+  border-radius: 22px;
+   display: block;
 }
 
 /* =========================
