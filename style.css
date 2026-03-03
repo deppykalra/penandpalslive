@@ -214,7 +214,7 @@ body.light .event-feature-card {
   padding: 160px 20px 120px;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-    url("/penandpalslive/assets/gaurav.jpeg") center/cover no-repeat;
+    url("assets/gaurav.jpeg") center/cover no-repeat;
 
   display: flex;
   align-items: center;
