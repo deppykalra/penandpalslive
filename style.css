@@ -30,9 +30,7 @@ body.light {
 
 /* HEADER */
 
-/* ===== HEADER ===== */
 
-/* ===== HEADER ===== */
 
 header {
   position: fixed;
@@ -52,6 +50,8 @@ header {
 
 .logo-container {
   flex-shrink: 0;
+    margin-right: 25px;
+
 }
 
 .logo-container img {
@@ -62,7 +62,7 @@ header nav {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;   /* reduced from 28 */
 }
 
 nav a {
@@ -351,4 +351,37 @@ body.light header {
 
 body.dark header {
   background: rgba(10,10,15,0.7);
+}
+
+
+
+/* NAV LINK COLORS */
+
+body.dark nav a {
+  color: rgba(255,255,255,0.85);
+}
+
+body.dark nav a:hover {
+  color: #ffffff;
+}
+
+body.light nav a {
+  color: rgba(0,0,0,0.8);
+    letter-spacing: 0.3px;
+  font-size: 0.95rem;
+}
+
+body.light nav a:hover {
+  color: #000000;
+}
+
+
+body.dark nav button {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+body.light nav button {
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.3);
 }
