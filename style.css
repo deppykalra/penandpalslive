@@ -162,15 +162,30 @@ body.light .event-feature-card {
 
 .hero {
   min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 160px 20px 120px;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
     url("/penandpalslive/assets/gaurav.jpeg") center/cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.hero > div {
+  max-width: 900px;
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+}
+
+.hero p {
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
 }
 
 .hero h1 {
