@@ -208,33 +208,37 @@ body.light .event-feature-card {
 /* =========================
    EVENT PAGE HERO
 ========================= */
+/* =========================
+   EVENT HERO
+========================= */
 
 .hero {
   min-height: 100vh;
   padding: 160px 20px 120px;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-    url("assets/gaurav.jpeg") center/cover no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-size: cover;
+  background-position: center;
 }
+
+/* DARK MODE */
+body.dark .hero {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("/assets/gaurav.jpeg");
+}
+
+/* LIGHT MODE */
+body.light .hero {
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0.55), rgba(255,255,255,0.75)),
+    url("/assets/gaurav.jpeg");
+}
+
 .hero > div {
   max-width: 900px;
-}
-
-.hero h1 {
-  margin-bottom: 24px;
-}
-
-.hero p {
-  margin-bottom: 40px;
-}
-
-.btn-primary {
-  display: inline-block;
 }
 
 .hero h1 {
@@ -242,21 +246,23 @@ body.light .event-feature-card {
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.1;
   max-width: 900px;
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
 }
+
 .hero p {
   font-size: 1.1rem;
   opacity: 0.9;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
-.btn-primary {
+
+.hero .btn-primary {
   background: var(--blue);
   color: white;
   padding: 14px 34px;
   border-radius: 40px;
   text-decoration: none;
+  display: inline-block;
 }
-
 /* =========================
    EVENT PAGE LAYOUT
 ========================= */
