@@ -271,10 +271,15 @@ body.light .detail-row {
 }
 
 .policy-list {
-  padding-left: 18px;
+  margin-top: 10px;
+  padding-left: 20px;
   line-height: 1.9;
-  opacity: 0.85;
   max-width: 600px;
+  text-align: left;
+}
+
+.policy-list li {
+  margin-bottom: 10px;
 }
 
 /* RIGHT SIDE */
