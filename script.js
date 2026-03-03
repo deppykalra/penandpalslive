@@ -34,7 +34,7 @@ fetch("/components/header.html")
     });
 
     // Apply saved theme AFTER header loads
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
   });
 
