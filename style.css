@@ -206,6 +206,26 @@ body.light .event-feature-card {
 }
 
 /* =========================
+   GLOBAL BUTTON
+========================= */
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+  padding: 14px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(13,59,142,0.35);
+}
+
+/* =========================
    EVENT PAGE HERO
 ========================= */
 /* =========================
